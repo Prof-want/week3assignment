@@ -1,6 +1,6 @@
 /* General Reset */
 * {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -8,6 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 10px;
 }
 
 
@@ -64,6 +65,121 @@ body {
 .menu {
     display: none;
 }
+#section1{
+    background-color: cornsilk;
+    margin: 0;
+}
+
+.container1{
+  margin-top: 0px;  
+  padding: 20px ;
+  text-align: center;
+  font-weight: 100;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+}
+.submit{
+    text-align: center;
+    padding-bottom: 20px
+    
+}
+#send{
+    font-size: larger;
+    font-weight: bold;
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border-radius: 15px; 
+}
+h4{
+    padding-top: 10px;
+    
+    color: blue;
+}
+h2{
+    padding: 10px 0px 15px 0px;
+}
+.button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#section2{
+    display: block;
+    width: 100%;
+    margin: 0px 20px 0px 10px;
+    overflow: hidden;
+
+}
+
+
+.contain{
+    float: right;
+    padding: 5px;
+    width: 40%;
+    border: 1px solid black;
+    margin: 15px;
+    box-sizing: content-box;
+text-align: left;
+border-radius: 10px;
+}
+.container2{
+    min-height: 200px;
+   width: 50%;
+    float: left;
+    
+}
+.container3{
+   display: flexbox;
+    width: 50%;
+    margin-top: 10px;
+    float: right;
+}
+.container4{
+    min-height: 200px;
+   width: 45%;
+    float: right;
+}
+img{
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+#About{
+    margin-top: 10px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Mobile Styles */
@@ -96,4 +212,25 @@ body {
     .menu:checked + .hamburger + .nav-links {
         display: flex;
     }
+
+.container2{
+    width: auto;
+    min-height: 200px;
+   display: grid;
+    float: left;
+}
+
+.container3{
+    
+     width: auto;
+     margin-top: 10px;
+     float: left;
+ 
+ }
+ .contain{
+    padding: 5px;
+    width: 40%;
+    border: 1px solid black;
+   
+}
 }
