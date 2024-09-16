@@ -101,6 +101,7 @@ h2{
 }
 .button{
     margin-top: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     border-radius: 20px;
 }
@@ -147,33 +148,74 @@ img{
     
 }
 #About{
-    margin: 10px 0px;
+    margin: 10px 10px;
 }
 
 #Service{
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
  
 .container5{
-    display: inline-flex;
+   display: inline-flex;
     margin-top: 20px;
-}
-.servebox{
-    margin: 10px;
+    background-color: white;
+    width: auto;
+    text-align: left;
     padding: 10px;
-    border: 1px solid black;
+}
+.servbox{
+margin: 10px;
+border: 0.2px solid whitesmoke;
+border-radius: 15px;
 }
 
-img2{
-    margin-top: 10px;
-    margin-right: 35%;
+
+#section3{
+    min-width: 400px;
+    
+}
+
+.container6{
+    width: 50%;
+    margin: 10px;
+    float: left;
+}
+.img6{
+
+     width: 45%;
+    float: right;
+}
+#Contact{
+    margin-top: 20px;
+    clear: both;
+    
+}
+.container7{
+    margin: 10px 0px;
+}
+.subcontainer7{
+    float: left;
+    width: 50%;
+}
+.form{
+    float: right;
+    width: 45%;
 }
 
 
 
-
-
+footer{
+    border: 0;
+    background: rgb(1, 1, 7);
+    padding: 0.5px;
+    clear: both;
+}
+footer p{
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
 
 
 
@@ -248,5 +290,15 @@ img2{
     width: 40%;
     border: 1px solid black;
    
+}
+.container6{
+    width: auto;
+    margin: 10px;
+  
+}
+.img6{
+margin: 30px;
+     width: auto;
+    
 }
 }
