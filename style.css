@@ -144,15 +144,31 @@ img{
     width: 50%;
     height: 300px;
     float: left;
+    
 }
 #About{
-    margin-top: 10px;
+    margin: 10px 0px;
+}
+
+#Service{
+    margin-top: 40px;
 }
 
  
+.container5{
+    display: inline-flex;
+    margin-top: 20px;
+}
+.servebox{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
 
-
-
+img2{
+    margin-top: 10px;
+    margin-right: 35%;
+}
 
 
 
