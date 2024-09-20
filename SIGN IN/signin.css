@@ -1,0 +1,61 @@
+body{
+    background: url("signin.jpg");
+    background-size: auto;
+    background-repeat: no repeat;
+}
+.container{
+    background: rgba(44, 62, 80, 0.7) ;
+    padding: 20px;
+  /*  margin-top: 90px;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+form{
+    text-align: center;
+    width: 240px;
+    margin-top: -10px;
+}
+input{
+    width: 180px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: bolder;
+    height: 25px;
+    outline: none;
+
+}
+button{
+    padding: 10px;
+    line-height: 15px;
+    border-radius: 20px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+p{
+    color: white;
+}
+a{
+    color: gold;
+}
+h2{
+    color: gold;
+}
+a:hover{
+    color: black ;
+}
+::placeholder{
+    color: whitesmoke;
+    opacity: 0.8;
+}

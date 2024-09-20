@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>welcome page</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Sign In</h2>
+<form id="loginForm">
+        <input type="text" id="email" placeholder="Email" required>
+    <br><br>
+
+  <input type="text" id="password" placeholder="Password" required>
+    <br><br>
+
+<button onclick="goTo()">Sign In</button required><br>
+
+<p>Don't have an account ? <a href="./signup.html">Sign Up</a></p> 
+</form>
+</div>
+</body>
+<script>
+   // Function to validate email using regular expression
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex pattern
+    return emailRegex.test(email);
+}
+
+// Function to validate password with specific rules
+function validatePassword(password) {
+    // Password must be at least 8 characters long, contain at least one number, one uppercase and one lowercase letter
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    return passwordRegex.test(password);
+}
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+   // const errorElement = document.getElementById('error');
+
+    // Validate email and password
+    if (!validateEmail(email)) {
+        errorElement.textContent = "Invalid email format.";
+    } else if (!validatePassword(password)) {
+        errorElement.textContent = "Password must be at least 8 characters, include one uppercase letter, one lowercase letter, and one number.";
+    } else {
+        errorElement.textContent = ""; // Clear error message
+        alert("Form submitted successfully!");
+        // Here you can proceed with form submission or other logic
+    }
+});
+
+</script>
+</html>
