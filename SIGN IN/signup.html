@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="signup.css">
     <title>Sign Up Page</title>
 </head>
 <body>
+  <div class="container">
     <h1>Sign Up</h1>
-     <form>
+     <form id="form">
         <label for="FullName">Name: 
         <input type="text" id="name" placeholder="FullName" required><br><br></label>
         
@@ -93,6 +94,7 @@
   </select><br><br>
   
   <h2>Terms and Condition</h2>
+  <div class="term">
   <label>   
   <input type="checkbox" value="" required> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   </label><br><br>
@@ -101,11 +103,13 @@
   <label>   
   <input type="checkbox" value="" required> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   </label><br><br>
+</div>
 
 
-  <button>submit</button>
-  <p>Already have an account? <a href="./signin.html">Sign In</a></p>
+  <button class="btn">submit</button>
+  <p>Already have an account? <a href="./signin.html"><span>Sign In</span></a></p>
       </form>
     </div>
+  </div>
 </body>
 </html>

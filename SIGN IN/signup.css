@@ -1,0 +1,54 @@
+body{
+    background: url("Shutterstock_Buravleva_stock-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background: rgba(44, 60, 70, 0.5);
+    width: 300px;
+    /*margin-top: 50px;*/
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#form{
+    width: 223px;
+    margin-top: -10px;
+
+}
+h1,h2 {
+    color: blue;
+}
+.term{
+    font: 700px;
+    font-weight: 500px;
+    font-size: medium;
+    text-align: justify;
+    color: black;
+}
+
+
+input{
+    outline: none;
+    
+ 
+}
+button{
+    border-radius: 20px;
+line-height: 15px;
+width: 80px;
+font-size: 20px;
+padding: 10px;
+border: none;
+}
+button:hover{
+    background-color: black;
+    color: white;
+
+}
+a:hover{
+    color: gold;
+}
+span{
+    font-size: large;
+}
