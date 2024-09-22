@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sub">
+      <h1>Sign Up</h1>
+      <form  id="form" method="post" action="./index.html" onsubmit="return validateForm()">
+        <div id="message">
+          <label for="FullName">Name:</label>
+          <input type="text" id="fullName" placeholder="fullName" required><br><br>
+
+          <label for="Email">Email:</label>
+          <input type="email" id="email" placeholder="Email" required><br><br> <!-- Changed to 'type="email"' -->
+
+          <label for="Password">Password:</label>
+          <input type="password" id="password" placeholder="Password" required><br><br>
+
+          <label for="ConfirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required><br><br>
+
+          <label for="Age">Age:</label>
+          <input type="number" id="age" placeholder="Age" min="18" max="120" required><br><br>
+        </div>
+
+        <h2>Gender</h2>
+        <label>
+          <input type="radio" name="Gender" value="Male"> Male
+        </label><br><br>
+        
+        <label>
+          <input type="radio" name="Gender" value="Female"> Female
+        </label><br><br>
+
+        <label for="country">Choose your country:</label>
+        <select id="country" name="country">
+          <option value="">Select Country</option>
+          <option value="DZ">Algeria</option>
+          <option value="AO">Angola</option>
+          <option value="BJ">Benin</option>
+          <option value="BW">Botswana</option>
+          <option value="BF">Burkina Faso</option>
+          <option value="BI">Burundi</option>
+          <option value="CV">Cape Verde</option>
+          <option value="CM">Cameroon</option>
+          <option value="CF">Central African Republic</option>
+          <option value="TD">Chad</option>
+          <option value="KM">Comoros</option>
+          <option value="CG">Congo - Brazzaville</option>
+          <option value="CD">Congo - Kinshasa</option>
+          <option value="CI">Côte d’Ivoire</option>
+          <option value="DJ">Djibouti</option>
+          <option value="EG">Egypt</option>
+          <option value="GQ">Equatorial Guinea</option>
+          <option value="ER">Eritrea</option>
+          <option value="SZ">Eswatini</option>
+          <option value="ET">Ethiopia</option>
+          <option value="GA">Gabon</option>
+          <option value="GM">Gambia</option>
+          <option value="GH">Ghana</option>
+          <option value="GN">Guinea</option>
+          <option value="GW">Guinea-Bissau</option>
+          <option value="KE">Kenya</option>
+          <option value="LS">Lesotho</option>
+          <option value="LR">Liberia</option>
+          <option value="LY">Libya</option>
+          <option value="MG">Madagascar</option>
+          <option value="MW">Malawi</option>
+          <option value="ML">Mali</option>
+          <option value="MR">Mauritania</option>
+          <option value="MU">Mauritius</option>
+          <option value="MA">Morocco</option>
+          <option value="MZ">Mozambique</option>
+          <option value="NA">Namibia</option>
+          <option value="NE">Niger</option>
+          <option value="NG">Nigeria</option>
+          <option value="RW">Rwanda</option>
+          <option value="ST">São Tomé and Príncipe</option>
+          <option value="SN">Senegal</option>
+          <option value="SC">Seychelles</option>
+          <option value="SL">Sierra Leone</option>
+          <option value="SO">Somalia</option>
+          <option value="ZA">South Africa</option>
+          <option value="SS">South Sudan</option>
+          <option value="SD">Sudan</option>
+          <option value="TZ">Tanzania</option>
+          <option value="TG">Togo</option>
+          <option value="TN">Tunisia</option>
+          <option value="UG">Uganda</option>
+          <option value="ZM">Zambia</option>
+          <option value="ZW">Zimbabwe</option>
+        </select><br><br>
+
+        <h2>Terms and Condition</h2>
+        <div class="term">
+
+          <div class="term">
+            <label>   
+            <input type="checkbox" value="" required> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
+            </label><br><br>
+          
+          
+            <label>   
+            <input type="checkbox" value="" required> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
+            </label><br><br>
+          </div>
+          <label>
+            <input type="checkbox" value="" required> I agree to the terms and conditions
+          </label><br><br>
+        </div>
+
+        <button type="submit" class="btn">Submit</button required>
+        <p>Already have an account? <a href="./signin.html"><span>Sign In</span></a></p>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <script>
+
+
+function validateFullName() {
+      console.log("Validating full name...");
+      var fullName = document.getElementById("fullName").value;
+      var namePattern = /^[a-zA-Z\s'-]+$/;
+
+      if (!namePattern.test(fullName)) {
+        alert("Please enter a valid full name. Only alphabets, spaces, hyphens, and apostrophes are allowed.");
+        return false;
+      }
+      return true;
+    }
+
+      function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+    
+    function validatePassword(password) {
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      return passwordRegex.test(password);
+    }
+    
+    function validateForm() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+     
+      if (!validateFullName()) {
+        return false;  // Prevent form submission if the full name is invalid
+      }
+      console.log("Full name is valid.", );
+
+      // Email validation
+      if (!validateEmail(email)) {
+        console.log("Invalid email detected:", email);  // Debugging info
+        alert("Invalid email address!");
+        return false;
+      }
+    
+      // Password validation
+      if (!validatePassword(password)) {
+        console.log("Invalid password detected:", password);  // Debugging info
+        alert("Password must be at least 8 characters long and contain one uppercase letter, one lowercase letter, one number, and one special character.");
+        return false;
+      }
+     
+    
+    
+      // Confirm password check
+      if (password !== confirmPassword) {
+        console.log("Password mismatch:", password, confirmPassword);  // Debugging info
+        alert("Passwords do not match!");
+        return false;
+      }
+    
+      console.log("Validation passed!");  // Debugging info
+      return true;  // Allow form submission if everything is valid
+    }
+    
+    // Attach the validation function to form submission
+    document.getElementById('form').onsubmit = function() {
+      console.log("Form submission triggered...");  // Debugging info
+      return validateForm();
+    };
+    
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <title>welcome page</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Sign In</h2>
+<form id="form" action="./index.html" method="post">
+        <input type="email" id="email" placeholder="Email" required>
+    <br><br>
+
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <br><br>
+
+<button type="submit">Sign In</button required><br>
+
+<p>Don't have an account ? <a href="./signup.html">Sign Up</a></p> 
+</form>
+</div>
+</body>
+
+<script>
+   
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validatePassword(password) {
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  return passwordRegex.test(password);
+}
+
+function validateForm() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+
+  // Email validation
+  if (!validateEmail(email)) {
+    console.log("Invalid email detected:", email);  // Debugging info
+    alert("Invalid email address!");
+    return false;
+  }
+
+  // Password validation
+  if (!validatePassword(password)) {
+    console.log("Invalid password detected:", password);  // Debugging info
+    alert("Password must be at least 8 characters long and contain one uppercase letter, one lowercase letter, one number, and one special character.");
+    return false;
+  }
+
+
+}
+
+// Attach the validation function to form submission
+document.getElementById('form').onsubmit = function() {
+  console.log("Form submission triggered...");  // Debugging info
+  return validateForm();
+};
+</script>
+</html>
