@@ -38,7 +38,7 @@
         </label><br><br>
 
         <label for="country">Choose your country:</label>
-        <select id="country" name="country">
+        <select id="country" name="country" required>
           <option value="">Select Country</option>
           <option value="DZ">Algeria</option>
           <option value="AO">Angola</option>
@@ -110,13 +110,15 @@
             </label><br><br>
           </div>
           <label>
-            <input type="checkbox" value="" required> I agree to the terms and conditions
+            <input type="checkbox" value="" id="terms"> I agree to the terms and conditions
           </label><br><br>
         </div>
 
         <button type="submit" class="btn">Submit</button required>
         <p>Already have an account? <a href="./signin.html"><span>Sign In</span></a></p>
       </form>
+
+<div id="formSummary"></div>
     </div>
   </div>
 
@@ -152,6 +154,10 @@ function validateFullName() {
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirmPassword').value;
+       const country = document.getElementById('country').value;
+       const termsAccepted = document.getElementById('terms').checked;
+
+
      
       if (!validateFullName()) {
         return false;  // Prevent form submission if the full name is invalid
@@ -190,7 +196,35 @@ function validateFullName() {
       console.log("Form submission triggered...");  // Debugging info
       return validateForm();
     };
-    
+
+
+
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+
+    const formData = {
+        name,
+        email,
+        country,
+        termsAccepted
+        
+    };
+
+    handleFormData(formData);
+  });
+  function displayFormData(data) {
+    const formSummary = document.getElementById('formSummary');
+    formSummary.innerHTML = `
+        <h3>Form Summary</h3>
+        <p>Name: ${data.name}</p>
+        <p>Email: ${data.email}</p>
+        <p>Password: ${'*'.repeat(data.password.length)}</p>
+        <p>Country: ${data.country}</p>
+    `;
+}
+
     </script>
 </body>
 
